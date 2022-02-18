@@ -97,29 +97,21 @@ namespace InterpretadorDeNumeros.ConsoleApp
             #endregion
 
 
-
-            //Console.Write(entradas);
-            for (int i = 0; i < linha1Letras.Length; i++)
+            
+            Console.Write("Linha 1: ");
+            Console.WriteLine("{0}", linha1String);
+            Console.Write("Linha 2: ");
+            Console.WriteLine("{0}", linha2String);
+            Console.Write("Linha 3: ");
+            Console.WriteLine("{0}", linha3String);
+           
+            for (int i = 0; i < 9; i++)
             {
-                Console.Write(linha1Letras[i]);
+                Console.WriteLine("Posicao {0}", i);
+                Console.WriteLine("{0}", linha1Letras[i]);
+                Console.WriteLine("{0}", linha2Letras[i]);
+                Console.WriteLine("{0}", linha3Letras[i]);
             }
-            Console.WriteLine();
-            for (int i = 0; i < linha2Letras.Length; i++)
-            {
-                Console.Write(linha2Letras[i]);
-            }
-            Console.WriteLine();
-            for (int i = 0; i < linha3Letras.Length; i++)
-            {
-                Console.Write(linha3Letras[i]);
-            }
-
-            Console.WriteLine("\nCinco: \n{0}\n{1}\n{2}", linha1Letras[0], linha2Letras[0], linha3Letras[0]);
-            Console.WriteLine("\nSeis: \n{0}\n{1}\n{2}", linha1Letras[1], linha2Letras[1], linha3Letras[1]);
-            Console.WriteLine("\nSete: \n{0}\n{1}\n{2}", linha1Letras[2], linha2Letras[2], linha3Letras[2]);
-            Console.WriteLine("\nOito: \n{0}\n{1}\n{2}", linha1Letras[3], linha2Letras[3], linha3Letras[3]);
-            Console.WriteLine("\nNove: \n{0}\n{1}\n{2}", linha1Letras[4], linha2Letras[4], linha3Letras[4]);
-            Console.WriteLine("\nUm: \n{0}\n{1}\n{2}", linha1Letras[5], linha2Letras[5], linha3Letras[5]);
             Console.ReadKey();
             Console.ReadLine();
 
