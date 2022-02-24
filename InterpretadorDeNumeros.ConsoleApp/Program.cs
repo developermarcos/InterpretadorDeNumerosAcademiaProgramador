@@ -49,24 +49,24 @@ namespace InterpretadorDeNumeros.ConsoleApp
                 string[] linha3Letras = new string[9];
 
                 #region tratativas de espaços inicio e fim da linha
-                for (int i = linha1String.Length; i < (quantidadeDeCaracteresPorLinha * 4); i++)
-                    linha1String += " ";
-                for (int i = linha2String.Length; i < (quantidadeDeCaracteresPorLinha * 4); i++)
-                    linha2String += " ";
-                for (int i = linha3String.Length; i < (quantidadeDeCaracteresPorLinha * 4); i++)
-                    linha3String += " ";
-
                 if (linha1String[0] == '_')
                     linha1String = " "+linha1String;
                 if (linha2String[0] == '_')
                     linha2String = " "+linha2String;
                 if (linha3String[0] == '_')
                     linha3String = " "+linha3String;
+
+                for (int i = linha1String.Length; i < (quantidadeDeCaracteresPorLinha * 4); i++)
+                    linha1String += " ";
+                for (int i = linha2String.Length; i < (quantidadeDeCaracteresPorLinha * 4); i++)
+                    linha2String += " ";
+                for (int i = linha3String.Length; i < (quantidadeDeCaracteresPorLinha * 4); i++)
+                    linha3String += " ";
                 #endregion
 
                 #region ler linha 1
                 int minimo = 0, maximo = 3, posicaoLetra = 0;
-                for (int i = 0; i < (linha1String.Length - 1); i++)
+                for (int i = 0; i < linha1String.Length; i++)
                 {
                     if (minimo == maximo)
                     {
@@ -87,7 +87,7 @@ namespace InterpretadorDeNumeros.ConsoleApp
                 maximo = 3;
                 posicaoLetra = 0;
 
-                for (int i = 0; i < (linha2String.Length - 1); i++)
+                for (int i = 0; i < linha2String.Length; i++)
                 {
                     if (minimo == maximo)
                     {
@@ -108,7 +108,7 @@ namespace InterpretadorDeNumeros.ConsoleApp
                 maximo = 3;
                 posicaoLetra = 0;
 
-                for (int i = 0; i < (linha3String.Length - 1); i++)
+                for (int i = 0; i < linha3String.Length; i++)
                 {
                     if (minimo == maximo)
                     {
@@ -155,7 +155,7 @@ namespace InterpretadorDeNumeros.ConsoleApp
                 for (int y = 0; y <  linha1String.Length; y++)
                     Console.Write("{0}", linha1String[y]);
                 Console.WriteLine();
-                for(int y = 0; y <  linha2String.Length - 1; y++)
+                for(int y = 0; y <  linha2String.Length; y++)
                     Console.Write("{0}", linha2String[y]);
                 Console.WriteLine();
                 for (int y = 0; y <  linha3String.Length; y++)
